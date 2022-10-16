@@ -114,15 +114,15 @@ function replay() {
 function resultTime() {
     value()
     listUp()
-    document.getElementsByClassName('contain2')[0].classList.remove('show');
-    document.getElementsByClassName('contain2')[0].classList.add('hidden'),
-        document.getElementsByClassName('contain')[0].classList.remove('hidden');
-    document.getElementsByClassName('pepper')[0].classList.add('hidden');
-    document.getElementsByClassName('start1')[0].classList.add('hidden');
-    document.getElementsByClassName('pageResult')[0].classList.remove('hidden');
-    document.getElementById('pageResult').innerHTML = `You are a ${max}!`;
+    document.getElementById('long').src = "https://player.vimeo.com/video/760640253?h=483799ddc7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&autopause=0&loop=0&muted=0";
+    setTimeout( result2, 2200)
+    function result2() {
+    document.getElementsByClassName('contain2')[0].classList.remove('bg');    
+    document.getElementsByClassName('questionsBox')[0].classList.add('hidden');
+    document.getElementsByClassName('waiting')[0].classList.remove('hidden');
+    document.getElementsByClassName('waiting2')[0].classList.remove('hidden');
     document.getElementsByClassName(`${max}Vid`)[0].classList.remove('hidden');
-    document.getElementsByClassName('reset')[0].classList.remove('hidden');
+    document.getElementsByClassName('submitAnswer')[0].classList.add('hidden');
     if (max === 'John') {
         JohnVidz()
     } else if (max === 'Paul') {
@@ -131,21 +131,38 @@ function resultTime() {
         GeorgeVidz()
     } else if (max === 'Ringo') {
         RingoVidz()
+    }}
+    setTimeout(result3, 7000)
+
+    function result3() {
+        document.getElementById('long').src = '';
+        document.getElementsByClassName('contain2')[0].classList.remove('show');
+        document.getElementsByClassName('contain2')[0].classList.add('hidden'),
+        document.getElementsByClassName('contain')[0].classList.remove('hidden');
+        document.getElementsByClassName('pepper')[0].classList.add('hidden');
+        document.getElementsByClassName('start1')[0].classList.add('hidden');
+        document.getElementsByClassName('pageResult')[0].classList.remove('hidden');
+        document.getElementById('pageResult').innerHTML = `You are a ${max}!`;
+        document.getElementsByClassName('reset')[0].classList.remove('hidden');
+
     }
 };
 
 function JohnVidz() {
-    document.getElementById(`${max}`).src = "https://player.vimeo.com/video/760088347?h=129c42c701&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&autopause=0&loop=1&muted=0";
+    document.getElementById(`${max}`).src = "https://player.vimeo.com/video/760620388?h=8d4250da2b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&autopause=0&loop=1&muted=0";
 }
 
 function PaulVidz() {
-    document.getElementById(`${max}`).src = "https://player.vimeo.com/video/760090968?h=ec73646633&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&autopause=0&loop=1&muted=0";
+    document.getElementById(`${max}`).src = "https://player.vimeo.com/video/760618087?h=d94f7682ec&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&autopause=0&loop=1&muted=0";
 }
 
 function GeorgeVidz() {
-    document.getElementById(`${max}`).src ="https://player.vimeo.com/video/760089081?h=4dc4fc3b9b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&autopause=0&loop=1&muted=0";
+    document.getElementById(`${max}`).src = "https://player.vimeo.com/video/760619326?h=93e4c929fd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&autopause=0&loop=1&muted=0";
 }
 
 function RingoVidz() {
-    document.getElementById(`${max}`).src = "https://player.vimeo.com/video/760091627?h=e63ec469ca&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&autopause=0&loop=1&muted=0";
+    document.getElementById(`${max}`).src = "https://player.vimeo.com/video/760617454?h=3f10f48b21&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&autopause=0&loop=1&muted=0";
 }
+// function waitSong() {
+   
+// }
