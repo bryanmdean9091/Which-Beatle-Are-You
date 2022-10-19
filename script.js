@@ -7,21 +7,64 @@ function uncheckRadio() {
             choice[i].checked = false;
     }
 };
+// function validate() {
+//     let valid = false;
+//     let x = document.myForm.answer;
+//     for (let i = 0;i<x.length;i++) {
+//         if (x[i].checked) {
+//             valid = true;
+//             break;
+//         }
+//      } if(valid) {
+//         return true;
+//      }
+//      else{
+//         alert('pls choose')
+//         return false;
+//      }  
+//  };
+
+//let valdt = document.forms['myForm']['answer'];
+
+
+
 
 let btn = document.getElementById('submitAnswer');
 let timesClicked = 1;
 
 function btnClicks() {
+    let valdt = document.forms['myForm']['answer'];
+
     if (timesClicked === 1) {
-        submit();
+        if (valdt[0].checked==false && valdt[1].checked==false && valdt[2].checked==false && valdt[3].checked==false) {
+            alert('Please Make a Selection') 
+            timesClicked =0
+        } else{
+        submit()}
     } else if (timesClicked === 2) {
-        submit2()
+        if (valdt[0].checked==false && valdt[1].checked==false && valdt[2].checked==false && valdt[3].checked==false) {
+            alert('Please Make a Selection')
+            timesClicked =1;
+        } else{
+        submit2()}
     } else if (timesClicked === 3) {
-        submit3()
+        if (valdt[0].checked==false && valdt[1].checked==false && valdt[2].checked==false && valdt[3].checked==false) {
+            alert('Please Make a Selection')
+            timesClicked =2;
+        } else{
+        submit3()}
     } else if (timesClicked === 4) {
-        submit4()
+        if (valdt[0].checked==false && valdt[1].checked==false && valdt[2].checked==false && valdt[3].checked==false) {
+            alert('Please Make a Selection')
+            timesClicked=3;
+        }else{
+        submit4()}
     } else {
-        resultTime()
+        if (valdt[0].checked==false && valdt[1].checked==false && valdt[2].checked==false && valdt[3].checked==false) {
+            alert('Please Make a Selection')
+            timesClicked =4;
+        }else{
+        resultTime()}
     }
     timesClicked++
 };
@@ -88,21 +131,21 @@ function submit2() {
 };
 
 function submit3() {
-    document.getElementById('questions').innerHTML = 'fourth question asked here:';
-    document.getElementById('one').innerHTML = 'fsdsdgfsdgsdgdgdg';
-    document.getElementById('two').innerHTML = 'dgdgdgdgadfgafdhga';
-    document.getElementById('three').innerHTML = 'siojfshfidhgfaogvds';
-    document.getElementById('four').innerHTML = 'dhfjlkhfajkdhfakdjf';
+    document.getElementById('questions').innerHTML = 'Which do you prefer for Relaxation?:';
+    document.getElementById('one').innerHTML = 'Hiding away indoors';
+    document.getElementById('two').innerHTML = 'Going out to museums';
+    document.getElementById('three').innerHTML = 'Traveling & learning about other cultures';
+    document.getElementById('four').innerHTML = 'Having a night on the town';
     value()
     uncheckRadio()
 };
 
 function submit4() {
-    document.getElementById('questions').innerHTML = 'fifth question asked here:';
-    document.getElementById('one').innerHTML = 'fsdsdgfsdgsdgdgdg';
-    document.getElementById('two').innerHTML = 'dgdgdgdgadfgafdhga';
-    document.getElementById('three').innerHTML = 'siojfshfidhgfaogvds';
-    document.getElementById('four').innerHTML = 'dhfjlkhfajkdhfakdjf';
+    document.getElementById('questions').innerHTML = 'Which type of movie do you prefer?';
+    document.getElementById('one').innerHTML = 'Avant garde';
+    document.getElementById('two').innerHTML = 'Musicals';
+    document.getElementById('three').innerHTML = 'Satire';
+    document.getElementById('four').innerHTML = 'Screwball Comedies';
     value()
     uncheckRadio()
 };
@@ -115,7 +158,7 @@ function resultTime() {
     value()
     listUp()
     document.getElementById('long').src = "https://player.vimeo.com/video/760640253?h=483799ddc7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&autopause=0&loop=0&muted=0";
-    setTimeout( result2, 2200)
+    setTimeout( result2, 2100)
     function result2() {
     document.getElementsByClassName('contain2')[0].classList.remove('bg');    
     document.getElementsByClassName('questionsBox')[0].classList.add('hidden');

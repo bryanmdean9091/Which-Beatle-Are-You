@@ -55,32 +55,49 @@ h1 {
 
 .typewriter h1 {
     font-size: 4rem;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid white; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color:none; }
-  }
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: none;
+    }
+}
 
 .waiting {
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
 
 .wontBe {
@@ -97,7 +114,7 @@ h1 {
     background-size: cover;
     border: .5rem solid white;
     color: white;
-   
+
 
 }
 
@@ -124,27 +141,24 @@ p {
 }
 
 label {
-    /* display: flex;
-    flex-direction: column; */
+    margin-left: 1rem;
+    margin-right: auto;
+    text-align: center;
+    position: auto;
     color: white;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5rem;   
-    
+    font-size: 1.5rem;
+
 }
 
 input[type=radio],
 input[type=checkbox] {
-    /* display: flex;
-    flex-direction: column; */
+    text-align: center;
     transform: scale(2);
     margin-top: 1rem;
     margin-bottom: 2rem;
-    margin-left: 3rem;
     margin-right: 1rem;
-    /* size: 2rem; */
-    /* float: left;
-    clear: both; */   
 }
 
 .buttonSub {
@@ -157,7 +171,7 @@ input[type=checkbox] {
     border: .25rem solid white;
     font-weight: 700;
     width: 20rem;
-   
+
 }
 
 .pageResult {
@@ -172,7 +186,5 @@ input[type=checkbox] {
     font-weight: 700;
     width: fit-content;
     margin-top: 1rem;
-    margin-bottom: 1rem;  
+    margin-bottom: 1rem;
 }
-
-  
