@@ -50,11 +50,11 @@ h1 {
 }
 
 .bg {
-    background-image: url('./media/with.jpg');
+    background-image: url('./media/with.jpg'); 
 }
 
 .typewriter h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
     border-right: .15em solid white;
@@ -109,7 +109,7 @@ h1 {
 .waiting2 {
     height: 18rem;
     width: 30rem;
-    background-image: url('./media/beatgif.gif');
+    background-image: url('./media/beatgif.gif'); 
     background-repeat: no-repeat;
     background-size: cover;
     border: .5rem solid white;
@@ -149,7 +149,11 @@ label {
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.5rem;
+}
 
+fieldset {
+    display: inline-grid;
+    line-height: 1.5rem;
 }
 
 input[type=radio],
@@ -160,6 +164,7 @@ input[type=checkbox] {
     margin-bottom: 2rem;
     margin-right: 1rem;
 }
+
 
 .buttonSub {
     display: flex;

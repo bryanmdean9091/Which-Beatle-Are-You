@@ -15,49 +15,54 @@
 <body>
     <div class="container-fluid hidden contain2 bg mt-4">
         <div class="row col-8 row2">
+            <!-- hidden elements that pop up after quiz(lines 19-24) -->
             <div class="waiting hidden mt-5 typewriter">
                 <h1>Just a Moment...</h1>
             </div>
             <div class="wontBe">
                 <div class="waiting2 hidden"></div>
             </div>
+            <!-- Form box hold questions and radio button responses/ question and answers change on submit Lines(26-41) -->
             <div class="questionsBox mt-5 p-2 text-center">
                 <p class="question mt-3 mb-3 text-center" id="questions">In a conflict, you are most likely to:</p>
                 <form name="myForm">
-                    <div class="form text-center">
-                    <input class="box" type="radio" name="answer" id="rad1" value="John" required>
-                    <label for="rad1" id="one">Get emotional and fight </label>
-                    <br>
-                    <input class="box" type="radio" name="answer" id="rad2" value="Paul">
-                    <label for="rad2" id="two">Try to be diplomatic</label>
-                    <br>
-                    <input class="box" type="radio" name="answer" id="rad3" value="George">
-                    <label for="rad3" id="three">Shutdown and remove yourself</label>
-                    <br>
-                    <input class="box" type="radio" name="answer" id="rad4" value="Ringo">
-                    <label class="mb-3" for="rad4" id="four">Be the peacemaker</label>            
-                </div>
+                    <fieldset class="field">
+                        <label for="rad1" id="one"><input class="box" type="radio" name="answer" id="rad1" value="John">
+                            <span id="span1"> Get emotional and fight </span></label>
+                        <label for="rad2" id="two"><input class="box" type="radio" name="answer" id="rad2" value="Paul">
+                            <span id="span2"> Try to be diplomatic</span>
+                        </label>
+                        <label for="rad3" id="three"> <input class="box" type="radio" name="answer" id="rad3"
+                                value="George"> <span id="span3">Shutdown and remove yourself</span> </label>
+                        <label class="mb-3" for="rad4" id="four"> <input class="box" type="radio" name="answer"
+                                id="rad4" value="Ringo"> <span id="span4">Be the peacemaker</span> </label>
+                    </fieldset>
                 </form>
             </div>
+            <!-- Submit Button triggers multiple functions respective to number of clicks  lines(43-46) -->
             <div class="buttonSub">
                 <button class="submitAnswer mt-0 rounded-pill" type="submit" id="submitAnswer" id="playBtn"
                     onclick="btnClicks()">Submit</button>
             </div>
         </div>
     </div>
-
+    <!-- Page Header with Title, including Beatles Logo image -->
     <div class="container-fluid contain show">
         <div class="row col-6 row1">
             <h1 class="which mt-5">Which member of </h1>
             <img class="logo" src="./css/media/beatles logo (2).jpg" alt="The Beatles Logo">
             <h1 class="mt-0">are you?</h1>
+            <!-- h3 is hidden until results of quiz. HTML is inserted through javascript -->
             <h3 class="pageResult hidden" id="pageResult"></h3>
+            <!-- Reset button is hidden until result screen of quiz -->
             <button class="reset hidden btn=md rounded-pill " type="reset" onclick="replay()">New Quiz</button>
+            <!-- Hidden video autoplays song during Waiting for Results page/ Javascript inserts the src at the appropriate time -->
             <div class="long hidden" style="padding:56.25% 0 0 0;position:relative;"><iframe id="long" src=""
                     frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                     style="position:absolute;top:0;left:0;width:100%;height:100%;"
                     title="Won&amp;rsquo;t be long"></iframe></div>
             <script src="https://player.vimeo.com/api/player.js"></script>
+            <!-- Depending on the result of the quiz, one of these 4 videos will play on the final result screen/ the src url is inserted into the html page at the appropriate time -->
             <div class="JohnVid hidden" style="padding:56.25% 0 0 0;position:relative;"><iframe id="John" src=""
                     frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                     style="position:absolute;top:0;left:0;width:100%;height:75%;" title="John video timed"></iframe>
@@ -78,6 +83,7 @@
                     style="position:absolute;top:0;left:0;width:100%;height:75%;" title="Ringo video timed"></iframe>
             </div>
             <script src="https://player.vimeo.com/api/player.js"></script>
+            <!-- Opening page image and start quiz button that triggers Javascript function -->
             <img class="pepper mt-4 " src="./css/media/sgt pepper.jpg" alt="Sgt Pepper cover with blank faces">
             <button class="start1 mt-5 rounded-pill" type="submit" id="startBtn" onclick="startQuiz()">Start
                 Quiz</button>

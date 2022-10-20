@@ -7,26 +7,6 @@ function uncheckRadio() {
             choice[i].checked = false;
     }
 };
-// function validate() {
-//     let valid = false;
-//     let x = document.myForm.answer;
-//     for (let i = 0;i<x.length;i++) {
-//         if (x[i].checked) {
-//             valid = true;
-//             break;
-//         }
-//      } if(valid) {
-//         return true;
-//      }
-//      else{
-//         alert('pls choose')
-//         return false;
-//      }  
-//  };
-
-//let valdt = document.forms['myForm']['answer'];
-
-
 
 
 let btn = document.getElementById('submitAnswer');
@@ -34,33 +14,34 @@ let timesClicked = 1;
 
 function btnClicks() {
     let valdt = document.forms['myForm']['answer'];
+    let validate = (valdt[0].checked==false && valdt[1].checked==false && valdt[2].checked==false && valdt[3].checked==false)
 
     if (timesClicked === 1) {
-        if (valdt[0].checked==false && valdt[1].checked==false && valdt[2].checked==false && valdt[3].checked==false) {
+        if (validate) {
             alert('Please Make a Selection') 
             timesClicked =0
         } else{
         submit()}
     } else if (timesClicked === 2) {
-        if (valdt[0].checked==false && valdt[1].checked==false && valdt[2].checked==false && valdt[3].checked==false) {
+        if(validate) {
             alert('Please Make a Selection')
             timesClicked =1;
         } else{
         submit2()}
     } else if (timesClicked === 3) {
-        if (valdt[0].checked==false && valdt[1].checked==false && valdt[2].checked==false && valdt[3].checked==false) {
+        if (validate) {
             alert('Please Make a Selection')
             timesClicked =2;
         } else{
         submit3()}
     } else if (timesClicked === 4) {
-        if (valdt[0].checked==false && valdt[1].checked==false && valdt[2].checked==false && valdt[3].checked==false) {
+        if (validate) {
             alert('Please Make a Selection')
             timesClicked=3;
         }else{
         submit4()}
     } else {
-        if (valdt[0].checked==false && valdt[1].checked==false && valdt[2].checked==false && valdt[3].checked==false) {
+        if (validate) {
             alert('Please Make a Selection')
             timesClicked =4;
         }else{
@@ -112,40 +93,40 @@ function startQuiz() {
 
 function submit() {
     document.getElementById('questions').innerHTML = 'In a team situation, you usually:';
-    document.getElementById('one').innerHTML = 'Collaborate, but know what you want';
-    document.getElementById('two').innerHTML = 'Take control of the situation';
-    document.getElementById('three').innerHTML = 'Work things out on your own';
-    document.getElementById('four').innerHTML = 'Go with the flow and do what is needed';
+    document.querySelector('#span1').innerHTML = 'Collaborate, but know what you want';
+    document.querySelector('#span2').innerHTML =  'Take control of the situation';
+    document.querySelector('#span3').innerHTML  = 'Work things out on your own';
+    document.querySelector('#span4').innerHTML  = 'Go with the flow and do what is needed';
     value()
     uncheckRadio()
 };
 
 function submit2() {
     document.getElementById('questions').innerHTML = 'Which of these best describes you?';
-    document.getElementById('one').innerHTML = 'Intellectual';
-    document.getElementById('two').innerHTML = 'Workaholic';
-    document.getElementById('three').innerHTML = 'Spiritual';
-    document.getElementById('four').innerHTML = 'Affable';
+    document.querySelector('#span1').innerHTML = 'Intellectual';
+    document.querySelector('#span2').innerHTML = 'Workaholic';
+    document.querySelector('#span3').innerHTML  = 'Spiritual';
+    document.querySelector('#span4').innerHTML  = 'Affable';
     value()
     uncheckRadio()
 };
 
 function submit3() {
     document.getElementById('questions').innerHTML = 'Which do you prefer for Relaxation?:';
-    document.getElementById('one').innerHTML = 'Hiding away indoors';
-    document.getElementById('two').innerHTML = 'Going out to museums';
-    document.getElementById('three').innerHTML = 'Traveling & learning about other cultures';
-    document.getElementById('four').innerHTML = 'Having a night on the town';
+    document.querySelector('#span1').innerHTML = 'Hiding away indoors';
+    document.querySelector('#span2').innerHTML = 'Going out to museums';
+    document.querySelector('#span3').innerHTML  = 'Traveling & learning about other cultures';
+    document.querySelector('#span4').innerHTML  =  'Having a night on the town';
     value()
     uncheckRadio()
 };
 
 function submit4() {
     document.getElementById('questions').innerHTML = 'Which type of movie do you prefer?';
-    document.getElementById('one').innerHTML = 'Avant garde';
-    document.getElementById('two').innerHTML = 'Musicals';
-    document.getElementById('three').innerHTML = 'Satire';
-    document.getElementById('four').innerHTML = 'Screwball Comedies';
+    document.querySelector('#span1').innerHTML = 'Avant garde';
+    document.querySelector('#span2').innerHTML = 'Musicals';
+    document.querySelector('#span3').innerHTML  = 'Satire';
+    document.querySelector('#span4').innerHTML  = 'Screwball Comedies'; 
     value()
     uncheckRadio()
 };
