@@ -112,7 +112,7 @@ function submit2() {
 };
 
 function submit3() {
-    document.getElementById('questions').innerHTML = 'Which do you prefer for Relaxation?:';
+    document.getElementById('questions').innerHTML = 'Which do you prefer for Relaxation?';
     document.querySelector('#span1').innerHTML = 'Hiding away indoors';
     document.querySelector('#span2').innerHTML = 'Going out to museums';
     document.querySelector('#span3').innerHTML  = 'Traveling & learning about other cultures';

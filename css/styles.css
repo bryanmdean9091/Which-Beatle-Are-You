@@ -5,6 +5,7 @@ body {
 .contain {
     text-align: center;
     display: inline-block;
+    max-height: 100vh;
 
 }
 
@@ -114,8 +115,6 @@ h1 {
     background-size: cover;
     border: .5rem solid white;
     color: white;
-
-
 }
 
 .questionsBox {
@@ -136,8 +135,8 @@ h1 {
 p {
     color: white;
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
 }
 
 label {
@@ -159,12 +158,12 @@ fieldset {
 input[type=radio],
 input[type=checkbox] {
     text-align: center;
-    transform: scale(2);
+    transform: scale(1.75);
     margin-top: 1rem;
     margin-bottom: 2rem;
     margin-right: 1rem;
+    accent-color: black;
 }
-
 
 .buttonSub {
     display: flex;
@@ -176,7 +175,7 @@ input[type=checkbox] {
     border: .25rem solid white;
     font-weight: 700;
     width: 20rem;
-
+    margin-bottom: 5rem;
 }
 
 .pageResult {
